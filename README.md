@@ -101,7 +101,7 @@ The tables will be auto-created by Hibernate when the backend starts (`ddl-auto=
    mvn spring-boot:run
    ```
 
-   The backend will start on `http://localhost:8080`.
+   The backend will start on `http://localhost:8081`.
 
 ### 3. Frontend Setup
 
