@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Task Manager - Manage your tasks">
+    <title>Task Manager - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>Task Manager</h1>
+        <div class="header-right">
+            <span id="welcome-msg">Welcome</span>
+            <button id="logout-btn" class="btn btn-small">Logout</button>
+        </div>
+    </header>
+
+    <main class="dashboard-content">
+        <!-- Error message area -->
+        <div id="dashboard-error" class="error-message"></div>
+
+        <!-- Add Task Section -->
+        <div class="add-task-card">
+            <h2>Add Task</h2>
+            <div class="add-task-form">
+                <input type="text" id="task-title" placeholder="Task title" required>
+                <textarea id="task-desc" placeholder="Description (optional)" rows="1"></textarea>
+                <button id="add-task-btn" class="btn">Add Task</button>
+            </div>
+        </div>
+
+        <!-- Task Columns -->
+        <div class="task-columns">
+            <!-- Todo Column -->
+            <div class="task-column col-todo">
+                <div class="column-header">
+                    <span>Todo</span>
+                    <span class="count" id="todo-count">0</span>
+                </div>
+                <div class="task-list" id="todo-list">
+                    <div class="loading">Loading tasks</div>
+                </div>
+            </div>
+
+            <!-- In Progress Column -->
+            <div class="task-column col-inprogress">
+                <div class="column-header">
+                    <span>In Progress</span>
+                    <span class="count" id="inprogress-count">0</span>
+                </div>
+                <div class="task-list" id="inprogress-list">
+                </div>
+            </div>
+
+            <!-- Done Column -->
+            <div class="task-column col-done">
+                <div class="column-header">
+                    <span>Done</span>
+                    <span class="count" id="done-count">0</span>
+                </div>
+                <div class="task-list" id="done-list">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
